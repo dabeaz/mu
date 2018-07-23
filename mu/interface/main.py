@@ -102,14 +102,16 @@ class ButtonBar(QToolBar):
         """
         Compact button bar for when window is very small.
         """
-        font_size = DEFAULT_FONT_SIZE
+        # font_size = DEFAULT_FONT_SIZE
+        font_size = DEFAULT_FONT_SIZE // 2
         if width < 940 and height > 600:
             self.setIconSize(QSize(48, 48))
         elif height < 600 and width < 940:
             font_size = 10
             self.setIconSize(QSize(32, 32))
         else:
-            self.setIconSize(QSize(64, 64))
+            #self.setIconSize(QSize(64, 64))
+            self.setIconSize(QSize(32, 32))
         stylesheet = "QWidget{font-size: " + str(font_size) + "px;}"
         self.setStyleSheet(stylesheet)
 

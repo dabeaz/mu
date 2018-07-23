@@ -44,7 +44,7 @@ def should_patch_osx_mojave_font():
 
 
 # The default font size.
-DEFAULT_FONT_SIZE = 14
+DEFAULT_FONT_SIZE = 24
 # All editor windows use the same font
 if should_patch_osx_mojave_font():  # pragma: no cover
     logger.warn("Overriding built-in editor font due to Issue #552")

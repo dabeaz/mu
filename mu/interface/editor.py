@@ -162,6 +162,7 @@ class EditorPane(QsciScintilla):
         self.indicatorDefine(self.FullBoxIndicator, self.DEBUG_INDICATOR)
         self.setAnnotationDisplay(self.AnnotationBoxed)
         self.selectionChanged.connect(self.selection_change_listener)
+        self.setCallTipsStyle(self.CallTipsNone)
 
     def connect_margin(self, func):
         """
@@ -189,7 +190,7 @@ class EditorPane(QsciScintilla):
         self.setMarkerBackgroundColor(theme.BreakpointMarker,
                                       self.BREAKPOINT_MARKER)
         self.setAutoCompletionThreshold(2)
-        self.setAutoCompletionSource(QsciScintilla.AcsAll)
+        # self.setAutoCompletionSource(QsciScintilla.AcsAll)
         self.setLexer(self.lexer)
         self.setMarginsBackgroundColor(theme.Margin)
         self.setMarginsForegroundColor(theme.Caret)

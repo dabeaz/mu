@@ -41,8 +41,9 @@ from mu import __version__
 
 # The user's home directory.
 HOME_DIRECTORY = os.path.expanduser('~')
+HOME_DIRECTORY = os.getcwd()
 # Name of the directory within the home folder to use by default
-WORKSPACE_NAME = 'mu_code'
+WORKSPACE_NAME = '.mu_code'
 # The default directory for application data (i.e., configuration).
 DATA_DIR = appdirs.user_data_dir(appname='mu', appauthor='python')
 # The default directory for application logs.
